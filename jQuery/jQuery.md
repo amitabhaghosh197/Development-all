@@ -10,8 +10,11 @@
 })(jQuery);
 ```
 > [example](../jQuery/demos/function/) 
-*By passing jQuery to a function that defines the parameter as $, $ is guaranteed to reference
+
+
+By passing jQuery to a function that defines the parameter as `$`, `$` is guaranteed to reference
 jQuery within the body of the function.
-We can now happily use $ to our heart’s content in the definition of the plugin.*
+We can now happily use $ to our heart’s content in the definition of the plugin.
+
 
 
