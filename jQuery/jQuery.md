@@ -1,6 +1,6 @@
 
-# jQuery Function Guide # 
-# The approach from Manning.Jquery In Action #
+# jQuery Function Guide  
+## The approach from Manning.Jquery In Action 
 Though this function is the style of jQuery Plugin but---
 ```
 (function($){
