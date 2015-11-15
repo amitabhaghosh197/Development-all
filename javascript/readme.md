@@ -10,7 +10,7 @@ direction = 1;
 }
 else
 {
-direction = ?1;
+direction = -1;
 }
 ```
  Write to this 
