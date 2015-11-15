@@ -169,7 +169,7 @@ var init = function()
 
 
 
-* User/Repository: stevekwan/best-practices
+* User/Repository: https://github.com/stevekwan/best-practices
 
 
 ### 6. Why we use return false in jQuery function
