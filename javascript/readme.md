@@ -166,6 +166,8 @@ var init = function()
     $("a.some-link").unbind(handleClick).click(handleClick);
 };
 ```
+
+
 * User/Repository: stevekwan/best-practices
 
 
@@ -184,3 +186,4 @@ Read this question:
 
 
 http://stackoverflow.com/questions/5927689/when-should-i-use-return-false-in-jquery-function
+
