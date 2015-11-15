@@ -1,4 +1,5 @@
-# Few writing formats in javascript
+# Few writing formats in javascript As from Smashing EBOOK JAVSCRIPT ESSENTIALS
+
 ## 1. Ternary Operator
 
  Details  
