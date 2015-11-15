@@ -34,3 +34,50 @@ document.getElementById('delicious').innerHTML = out;
 </script>
 <script src="http://feeds.delicious.com/v2/json/codepo8/javascript? count=15&callback=delicious "></script>
 ```
+### 3. Anonymous Functions And the Module Pattern
+
+One of the most annoying things about JavaScript is that it has no scope for
+variables. Any variable, function, array or object you define that is not inside
+another function is global, which means that other scripts on the same page
+can access—and will usually override— them.
+
+The workaround is to encapsulate your variables in an anonymous function
+and call that function immediately after you define it. For example, the
+following definition would result in three global variables and two global
+functions:
+
+```
+ var name = 'Chris';
+var age = '34';
+var status = 'single';
+function createMember(){
+//
+[...]
+}
+function getMemberDetails(){
+//
+[...]
+}
+```
+###### Better Workarounds > 
+
+Any other script on the page that has a variable named status could cause
+trouble. If we wrap all of this in a name such as myApplication, then we
+work around that issue:
+
+```
+ var myApplication =
+function(){
+var name = 'Chris';
+var age = '34';
+var status = 'single';
+function createMember(){
+//
+[...]
+}
+function getMemberDetails(){
+//
+[...]
+}
+}();
+```
