@@ -167,6 +167,8 @@ var init = function()
 };
 ```
 * User/Repository: stevekwan/best-practices
+
+
 ### 6. Why we use return false in jQuery function
 
 ```
@@ -179,4 +181,6 @@ $(function() {
 ```
 
 Read this question:
+
+
 http://stackoverflow.com/questions/5927689/when-should-i-use-return-false-in-jquery-function
