@@ -132,3 +132,25 @@ return{
 }();
 //myApplication.get() and myApplication.create() now work.
 ```
+
+### 4. Namespacing Pattern
+
+A better pattern
+would take advantage of boolean conversion with an inner variable
+declaration, as follows:
+```
+if
+(!MyNamespace)
+{
+var MyNamespace = {};
+}
+
+//or [ a more efficient way of doing this]
+var myNamespace = myNamespace || {};
+
+//or
+if
+( typeof MyNamespace == 'undefined' ) {
+var MyNamespace = {};
+}
+```
