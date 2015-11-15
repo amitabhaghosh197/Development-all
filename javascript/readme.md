@@ -110,3 +110,24 @@ myApplication.getMemberDetails() now works.
 This is called a module pattern or singleton. It was mentioned a lot by Douglas Crockford and is used very much in the Yahoo User Interface Library YUI.
 
 
+######The Other Way
+```
+var myApplication = function(){
+var name = 'Chris';
+var age = '34';
+var status = 'single';
+function createMember(){
+//
+[...]
+}
+function getMemberDetails(){
+//
+[...]
+}
+return{
+ create:createMember,
+ get:getMemberDetails
+}
+}();
+//myApplication.get() and myApplication.create() now work.
+```
