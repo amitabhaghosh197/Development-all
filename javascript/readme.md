@@ -166,3 +166,17 @@ var init = function()
     $("a.some-link").unbind(handleClick).click(handleClick);
 };
 ```
+* User/Repository: stevekwan/best-practices
+### 6. Why we use return false in jQuery function
+
+```
+$(function() {
+    $("body a").click(function() {
+        alert(this.innerHTML);
+        return false;
+    });
+});
+```
+
+Read this question:
+http://stackoverflow.com/questions/5927689/when-should-i-use-return-false-in-jquery-function
