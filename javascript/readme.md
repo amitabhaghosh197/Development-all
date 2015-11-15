@@ -154,3 +154,15 @@ if
 var MyNamespace = {};
 }
 ```
+### 5. A good defensive coding practice is to unbind an event handler before binding, like so:
+```
+ var handleClick = function()
+{
+    // Do some stuff
+};
+
+var init = function()
+{
+    $("a.some-link").unbind(handleClick).click(handleClick);
+};
+```
