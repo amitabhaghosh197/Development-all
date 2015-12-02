@@ -188,5 +188,41 @@ Read this question:
 
 http://stackoverflow.com/questions/5927689/when-should-i-use-return-false-in-jquery-function
 
+### 7. Free-standing JavaScript (i.e. JavaScript that does not run inside
 
+a function) operates within the global scope of the window object, to which
 
+everything has access; whereas local variables declared inside functions are
+
+accessible only within that function, not outside.
+
+```
+ var animal = 'dog';
+ function getAnimal(adjective){
+  alert(adjective+ this.animal);
+  };
+
+ getAnimal('lovely'); // alerts 'lovely dog'
+```
+
+Here, our variable and function are both declared in the global scope (i.e. on
+window). Because this always points to the current scope, in this example it
+points to window.
+In a browser the page object is the browser window. The function above automatically becomes a window function.
+
+```
+var animal  = 'dog';
+function getAnimal(adjective)
+{ alert(adjective+''+this.animal);
+};
+var myObj = {animal:'camel'};
+getAnimal.call(myObj,'lovely'); //alerts 'lovely camel'
+
+Here, our function runs not on window but on myObj — specified as the first
+argument of the call method. Essentially, call() pretends that our function
+is a method of myObj (if this doesn’t make sense, you might want to read up
+on JavaScript’s system of prototypal inheritance). Note also that any
+arguments we pass to call() after the first will be passed on to our
+function — hence we’re passing in lovely as our adjective argument.
+
+Read : http://www.w3schools.com/js/js_function_invocation.asp
