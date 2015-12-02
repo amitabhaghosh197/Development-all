@@ -217,7 +217,7 @@ function getAnimal(adjective)
 };
 var myObj = {animal:'camel'};
 getAnimal.call(myObj,'lovely'); //alerts 'lovely camel'
-
+```
 Here, our function runs not on window but on myObj — specified as the first
 argument of the call method. Essentially, call() pretends that our function
 is a method of myObj (if this doesn’t make sense, you might want to read up
