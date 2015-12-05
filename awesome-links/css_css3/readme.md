@@ -1,38 +1,60 @@
 
-# jQuery Function Guide  
-## The approach from Manning.Jquery In Action Ebook 
-` Though this function is the style of jQuery Plugin but--- `
-```
-(function($){
-//
-// Plugin definition goes here
-//
-})(jQuery);
-```
-> [example](../jQuery/demos/function/) 
+# CSS
+## How to center an image in a thumbnail 
 
-
-By passing jQuery to a function that defines the parameter as `$`, `$` is guaranteed to reference
-jQuery within the body of the function.
-We can now happily use $ to our heart’s content in the definition of the plugin.
-
-## Plugin Style
-
-* Reff. Links:
-
-1. http://learn.jquery.com/plugins/basic-plugin-creation/
-
-2. http://stackoverflow.com/questions/12093192/how-to-create-a-jquery-function-create-a-new-jquery-method-or-plugin
-
+There are two ways :
 
 ```
-$.fn.greenify = function() {
-    this.css( "color", "green" );
-    return this;
+/* Process 1 */
+.item-wrapper{
+  position: relative;
+  display: inline-block;
+  overflow:hidden;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background-size: cover;
+  background-position: center center;
+  /*background:#fff;*/
 }
- 
-$( "a" ).greenify().addClass( "greenified" );
+
+.item-wrapper > img{
+  position: absolute;
+  max-width: 100%;
+  vertical-align: middle;
+  left: 50%;
+  top: 50%;
+  transform : translate(-50%,-50%);
+  /*height: 200px*/
+  margin-top:-2px;
+  
+}
+
+/* Process 2  */
+
+.item-wrap-2{
+  position: relative;
+  display: inline-block;
+  overflow:hidden;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  
+}
+
 ```
 
+Link
 
+http://jsfiddle.net/amitabhaghosh197/g7pasp37/7/
 
+http://stackoverflow.com/questions/26681059/create-a-circle-avatar-from-a-rectangle-image-keeping-proportions-and-just-using
+
+http://stackoverflow.com/questions/16310918/css-scale-and-square-center-crop-image
+
+http://stackoverflow.com/questions/11552380/how-to-automatically-crop-and-center-an-image
