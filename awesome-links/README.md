@@ -2,9 +2,9 @@
 
 Includes
 
-> HTML
-> CSS
-> jQuery
-> Javascript
-> Angular
-> Polyfills
+> HTML,
+> CSS,
+> jQuery,
+> Javascript,
+> Angular,
+> Polyfills,
