@@ -226,3 +226,17 @@ arguments we pass to call() after the first will be passed on to our
 function — hence we’re passing in lovely as our adjective argument.
 
 Read : http://www.w3schools.com/js/js_function_invocation.asp
+
+
+### 8. JavaScript to Apply a “You Are Here” Class to Site Navigation
+
+```
+<script>
+$(document).ready(function(){
+$('ul > li > a').each(function() {
+if (this.href === window.location.href){ $(this). addClass('current');}
+});
+})
+</script>
+
+```
