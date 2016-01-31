@@ -228,7 +228,7 @@ function — hence we’re passing in lovely as our adjective argument.
 Read : http://www.w3schools.com/js/js_function_invocation.asp
 
 
-### 8. JavaScript to Apply a “You Are Here” Class to Site Navigation
+### 8. JavaScript to Apply a “current” Class to Site Navigation
 
 ```
 <script>
@@ -239,4 +239,51 @@ if (this.href === window.location.href){ $(this). addClass('current');}
 })
 </script>
 
+```
+
+### 9. Call any variable / function outside of an anonymous function 
+
+We have to pass a return object literal
+
+
+```
+ <script src="//code.jquery.com/jquery.js"></script>
+    <script>
+         
+         var checkValue = (function(){
+          
+          // This is a function
+
+          var one = function(){
+               
+              var results = function(){
+                
+                 var x = 1;
+             var y = 3;
+             return x * y;
+            
+               }
+            return console.log(results());
+            
+          };
+
+          //This is Simple Variable
+          var two = 2;
+
+           // Unless this return object literal is not done all
+           // the vars inside the self executing annonymous function
+           // will not be called outside this function
+           
+          return {
+          one : one,
+          two : two 
+          };
+
+         })();
+          
+          //checkValue.one;
+          //console.log( checkValue.one);
+          checkValue.one();
+          console.log( checkValue.two);
+    </script>
 ```
